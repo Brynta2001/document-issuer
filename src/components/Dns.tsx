@@ -22,15 +22,15 @@ export const Dns = () => {
   return (
     <div>
       <section style={{ marginBottom: "24px" }}>
-        <p>
-          Copy and paste the command below into a terminal to get a temporary
-          DNS.
-        </p>
+      <p style={{ color: "black" }}>
+  Copy and paste the command below into a terminal to get a temporary DNS.
+</p >
         <code
           style={{
             padding: "8px 12px",
-            backgroundColor: "black",
+            backgroundColor: "white",
             display: "block",
+            color: "black",
           }}
         >
           npx open-attestation dns txt-record create --address{" "}
@@ -38,7 +38,7 @@ export const Dns = () => {
         </code>
       </section>
       <section style={{ marginBottom: "24px" }}>
-        <p>Enter the temporary DNS given in the input below.</p>
+        <p style={{ color: "black"}}>Enter the temporary DNS given in the input below.</p>
         <input
           style={{ padding: "8px 12px", width: "100%" }}
           type="text"

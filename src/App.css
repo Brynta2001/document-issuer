@@ -57,6 +57,6 @@ main {
 
 @media (min-width: 768px) {
   main {
-    width: 65ch;
+    width: 300ch;
   }
 }

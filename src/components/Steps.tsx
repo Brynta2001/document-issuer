@@ -22,11 +22,11 @@ const Step = ({
 }) => {
   return (
     <>
-      <h2>
-        {index + 1}. {title}
-      </h2>
-      {body}
-    </>
+  <h2 style={{ color: '#0050A6' }}>
+    {index + 1}. {title}
+  </h2>
+  {body}
+</>
   );
 };
 
@@ -86,7 +86,7 @@ export const Steps = () => {
     {
       key: "connect",
       title: "Connect Metamask Extension",
-      body: <Button buttonText="Connect" onHandler={onConnect} />,
+      body: <Button buttonText="Connect" onHandler={onConnect}/>,
     },
     {
       key: "deploy",
@@ -115,7 +115,12 @@ export const Steps = () => {
             rel="noreferrer noopener"
             style={{ margin: "0 8px 8px 0" }}
           >
-            <button>Verify</button>
+            <button style={{margin: "0 8px 8px 0",
+    backgroundColor: "white",
+    border: "1px solid black",
+    color: "#0050A6", // Color de texto azul
+    padding: "8px 16px",
+    cursor: "pointer",}}>Verify</button>
           </a>
           <Button buttonText="Create Another" onHandler={onCreateAnother} />
         </>
@@ -131,14 +136,15 @@ export const Steps = () => {
             key={`step-${step.key}`}
             style={{
               padding: "0 8px",
-              borderLeft: currentStep === step.key ? "solid 4px white" : "none",
+              borderLeft: currentStep === step.key ? "solid 4px #007bff" : "none",
             }}
           >
             <div
               style={{
                 opacity: currentStep === step.key ? "1" : "0.2",
                 lineHeight: 1.3,
-                fontSize: "13px",
+                fontSize: "20px",
+                color: "#0050A6", // Text color blue
               }}
             >
               {step.title}

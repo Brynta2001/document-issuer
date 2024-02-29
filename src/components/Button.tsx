@@ -11,11 +11,18 @@ export const Button = ({
 
   return (
     <button
-      onClick={onHandler}
-      disabled={status === "pending"}
-      style={{ margin: "0 8px 8px 0" }}
-    >
-      {status === "pending" ? "Pending..." : buttonText}
-    </button>
+  onClick={onHandler}
+  disabled={status === "pending"}
+  style={{
+    margin: "0 8px 8px 0",
+    backgroundColor: "white",
+    border: "1px solid black",
+    color: "#0050A6", // Color de texto azul
+    padding: "8px 16px",
+    cursor: "pointer",
+  }}
+>
+  {status === "pending" ? "Pending..." : buttonText}
+</button>
   );
 };

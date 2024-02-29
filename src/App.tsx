@@ -21,11 +21,16 @@ const App = () => {
 
   return (
     <AppContextProvider>
-      <main>
-        <Steps />
-      </main>
-    </AppContextProvider>
+  <main>
+    <div style={{ display: 'flex', alignItems: 'center', margin: '10px' }}>
+      <img src="https://cem.epn.edu.ec/imagenes/logos_institucionales/big_png/EPN_logo_big.png" alt="EPN Logo" style={{ width: '170px', height: '100px', marginRight: '10px' }} />
+      <p style={{ color: '#0050A6', fontSize: '50px', marginLeft: '50px', fontWeight: 'bold',  }}>EPN certificate issuance system</p>
+    </div>
+    <Steps />
+  </main>
+</AppContextProvider>
   );
+  
 };
 
 export default App;

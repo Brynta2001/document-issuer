@@ -82,18 +82,28 @@ export const DocumentForm = () => {
 
   return (
     <form onSubmit={onDocumentSubmit}>
-      <section style={{ marginBottom: "24px" }}>
-        <p>DNI</p>
-        <input
-          style={{ padding: "8px 12px", width: "100%" }}
-          type="text"
-          name="dni"
-          defaultValue="9999999999"
-        />
-      </section>
-      <button type="submit" disabled={status === "pending"}>
-        {status === "pending" ? "Pending..." : "Submit"}
-      </button>
-    </form>
+  <section style={{ marginBottom: "24px" }}>
+    <p style={{ color: "black" }}>DNI</p>
+    <input
+      style={{ padding: "8px 12px", width: "100%" }}
+      type="text"
+      name="dni"
+      defaultValue="9999999999"
+    />
+  </section>
+  <button
+    type="submit"
+    disabled={status === "pending"}
+    style={{
+      backgroundColor: "white",
+      border: "1px solid black",
+      color: "#007bff", // Color de texto azul
+      padding: "8px 16px",
+      cursor: "pointer",
+    }}
+  >
+    {status === "pending" ? "Pending..." : "Submit"}
+  </button>
+</form>
   );
 };
